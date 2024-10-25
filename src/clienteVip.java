@@ -2,14 +2,22 @@ public class clienteVip {
     private String nombre;
     private double limiteCredito;
     private String email;
-    private enum tipoVip{
-        GOLD, SILVER, NORMAL
+
+    private tipoVip tipoVip;
+
+    public tipoVip getTipoVip() {
+        return tipoVip;
     }
+
+    public void setTipoVip(tipoVip tipoVip) {
+        this.tipoVip = tipoVip;
+    }
+
     public String getNombre() {
         return nombre;
     }
 
-    public void setNombre() {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
@@ -17,7 +25,7 @@ public class clienteVip {
         return limiteCredito;
     }
 
-    public void setLimiteCredito() {
+    public void setLimiteCredito(double limiteCredito) {
         this.limiteCredito = limiteCredito;
     }
 
@@ -37,10 +45,11 @@ public class clienteVip {
         this.limiteCredito = limiteCredito;
     }
 
-    public clienteVip(String nombre, String email, double limiteCredito) {
+    public clienteVip(String nombre, String email, double limiteCredito, tipoVip tipoVip) {
         this.nombre = nombre;
         this.email = email;
         this.limiteCredito = limiteCredito;
+        this.tipoVip = tipoVip;
     }
 }
 
